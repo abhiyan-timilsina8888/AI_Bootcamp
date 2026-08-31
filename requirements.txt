@@ -1,0 +1,6 @@
+numpy
+pandas
+matplotlib
+seaborn
+streamlit
+xlrd>=2.0.1

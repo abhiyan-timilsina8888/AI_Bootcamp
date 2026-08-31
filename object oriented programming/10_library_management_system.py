@@ -90,12 +90,12 @@ while True:
 
     elif option == 5:
         print("Thanks for using library managemnet system")
+        break
 
     else:
         print("invalid number.")
 
 print("\n")
-
 
 
 
