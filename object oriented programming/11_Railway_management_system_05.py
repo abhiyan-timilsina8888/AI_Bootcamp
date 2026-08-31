@@ -20,7 +20,7 @@ class train:
         print(f"Fare: {self.fare}")
         
     def bookticket(self,passanger_name):
-        if (self.seats<=0):
+        if not self.available_seats:
             print("sorry the train is full")
         else:
            seat= min(self.available_seats)
@@ -59,7 +59,7 @@ while True:
     print("3.Book Ticket")
     print("4.Cancle Ticket")
     print("5.Booked Ticket")
-    print("5. Exit")
+    print("6. Exit")
 
 
     choose= int(input("enter the respective number:\n"))
@@ -84,6 +84,7 @@ while True:
 
     elif choose == 6:
         print("Thank you for using my system.")
+        break
 
     else:
         print("invalid number")

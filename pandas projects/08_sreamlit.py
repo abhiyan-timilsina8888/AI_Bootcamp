@@ -45,13 +45,13 @@ if upload is not None:
     if st.checkbox("Which dimension to check?"):
         d_shape= st.radio("",('Row' , 'Columns'))
 
-    if d_shape == 'Row':
-       st.text("Number of Rows:")
-       st.write(data.shape[0])
+        if d_shape == 'Row':
+           st.text("Number of Rows:")
+           st.write(data.shape[0])
 
-    if d_shape == 'Columns':
-       st.text("Number of Columns:")
-       st.write(data.shape[1])
+        if d_shape == 'Columns':
+           st.text("Number of Columns:")
+           st.write(data.shape[1])
 
 # Check the null value
 
@@ -96,7 +96,10 @@ if upload is not None:
             st.text("consider removing it ...")
 
         else:
-            st.success("No Duplicated values are found.")
+            st.info("Choose whether to remove duplicate values.")
+
+    else:
+        st.success("No duplicated values are found.")
 
 
 # Get Overall Statistics
@@ -122,7 +125,6 @@ if upload is not None:
 if upload is not None:
     if st.button("Created By"):
         st.success("Abhiyan Timilsina.")
-
 
 
 

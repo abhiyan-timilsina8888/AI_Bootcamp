@@ -1,13 +1,15 @@
-n=input("Enter no. of numbers to enter: ")
-
-
-num =list(map(int,input("Enter the numbers separating with commas: ").split(',')))
-
-if len(num) !=n:
-    print(f"Error, enter {n} numbers only... ")
+try:
+    expected_count = int(input("Enter the number of values: "))
+    numbers = [
+        int(value.strip())
+        for value in input("Enter comma-separated numbers: ").split(",")
+    ]
+except ValueError:
+    print("Please enter a whole-number count and valid whole numbers.")
 else:
-    num.sort(reverse= True)
-
-
-
-print(num)
+    if expected_count < 0:
+        print("The number of values cannot be negative.")
+    elif len(numbers) != expected_count:
+        print(f"Error: enter exactly {expected_count} numbers.")
+    else:
+        print("Numbers in ascending order:", sorted(numbers))

@@ -27,4 +27,7 @@ print(diction.get("abhiyan")) #prints the value of key abhiyan given in the dict
 # # the difference betweeen using the get and [] syntax in the dictionary
 
 print(diction.get("abhiyan2")) #gives none as the key is not given in the dictionary
-print(diction["abhiyan2"])  #gives error as the key is not given in the dictionary
+try:
+    print(diction["abhiyan2"])
+except KeyError:
+    print("A direct lookup for a missing key raises KeyError.")

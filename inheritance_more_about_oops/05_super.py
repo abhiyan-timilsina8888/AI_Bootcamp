@@ -6,10 +6,13 @@ class person:
 class employee(person):
     
     company="iphone"
+
+    def __init__(self, salary=0):
+        self.salary_amount = salary
    
    
     def salary(self):
-        print(f"the salary of the employee is {self.salary}")
+        print(f"the salary of the employee is {self.salary_amount}")
 
     def takebreath(self):
         super().takebreath()
